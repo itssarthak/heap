@@ -13,7 +13,7 @@ function createRow(child) {
     return row;
 }
 
-function getMaxLeaves (level) {
+function maxLeaves (level) {
     return Math.pow(2,level);
 }
 
