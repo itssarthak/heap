@@ -24,7 +24,7 @@ function prevLevelCount (level) {
     return val;
 }
 
-function createTree(values) {
+function createTree(values,main) {
     let level = 0;
     let row = createRow();
 
@@ -46,7 +46,7 @@ function createTree(values) {
 
 function main() {
     let main = document.getElementById('main');
-    createTree([1,2,3,4,5,6,7,8,9,10])
+    createTree([1,2,3,4,5,6,7,8,9,10],main)
 }
 
 main();
