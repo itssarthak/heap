@@ -30,7 +30,8 @@ function createTree(values) {
     let row = createRow();
 
     for(let i=0;i<values.length;i++) {
-        if((i-prevLevelCount(level))==maxLeaves(level)) {
+        let prevLevelCount = getPrevLevelCount(level);
+        if((i-prevLevelCount)==maxLeaves(level)) {
             main.appendChild(row);
             row = createRow();
             level++;
@@ -38,15 +39,11 @@ function createTree(values) {
         let circle = createCircle(values[i]);
         row.appendChild(circle);
     }
-
-    let prevLevelCount = getPrevLevelCount(level);
-    
-
-    let temp = createRow(createCircle(10));
-    main.appendChild(temp);
-    temp = createRow(createCircle(15));
-    temp.appendChild(createCircle(20));
-    main.appendChild(temp);
+    // let temp = createRow(createCircle(10));
+    // main.appendChild(temp);
+    // temp = createRow(createCircle(15));
+    // temp.appendChild(createCircle(20));
+    // main.appendChild(temp);
 }
 
 function main() {
