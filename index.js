@@ -14,7 +14,7 @@ function createRow(child) {
 
 function main() {
     let main = document.getElementById('main');
-    let temp = row(createCircle(10));
+    let temp = createRow(createCircle(10));
     main.appendChild(temp);
     temp = createRow(createCircle(15));
     temp.appendChild(createCircle(20));
