@@ -13,7 +13,12 @@
     </body>
     <script>
         let main = document.getElementById('main');
-        let newDiv = main.appendChild('div');
+        let newDiv = document.createElement('div');
+        newDiv.style.width='50px';
+        newDiv.style.height='50px';
+        newDiv.style.border='1px solid black';
+        newDiv.style.borderRadius='50%';
+        main.appendChild(newDiv);
         newDiv.class = "Circle";
 
     </script>
