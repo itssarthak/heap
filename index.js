@@ -30,7 +30,7 @@ function createTree(values) {
     let row = createRow();
 
     for(let i=0;i<values.length;i++) {
-        let prevLevelCount = getPrevLevelCount(level);
+        let prevLevelCount = prevLevelCount(level);
         if((i-prevLevelCount)==maxLeaves(level)) {
             main.appendChild(row);
             row = createRow();
