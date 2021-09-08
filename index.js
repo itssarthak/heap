@@ -13,11 +13,11 @@ function createRow(child) {
     return row;
 }
 
-const getMaxLeaves = (level) => {
+function getMaxLeaves (level) {
     return Math.pow(2,level);
 }
 
-const prevLevelCount = (level) => {
+function prevLevelCount (level) {
     if(level <= 0) return 0;
     let val = 0;
     while(level) val += getMaxLeaves(--level);
