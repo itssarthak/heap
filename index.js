@@ -2,12 +2,13 @@ function createCircle(text) {
     let circle = document.createElement('div');
     circle.className = "circle alignCenter justifyCenter";
     if(text || text == 0) circle.innerText = text;
+    circle.style.margin='10px';
     return circle;
 }
 
 function createRow(child) {
     let row = document.createElement('div');
-    row.className = "row";
+    row.className = "row justifyCenter";
     if(child) row.appendChild(child);
     return row;
 }
