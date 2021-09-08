@@ -20,13 +20,12 @@ function maxLeaves (level) {
 function prevLevelCount (level) {
     if(level <= 0) return 0;
     let val = 0;
-    while(level) val += getMaxLeaves(--level);
+    while(level) val += maxLeaves(--level);
     return val;
 }
 
 function createTree(values) {
     let level = 0;
-    let maxLeaves = getMaxLeaves(level);
     let row = createRow();
 
     for(let i=0;i<values.length;i++) {
