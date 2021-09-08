@@ -1,4 +1,6 @@
 let main = document.getElementById('main');
-let newDiv = document.createElement('div');
-newDiv.class = "circle";
-main.appendChild(newDiv);
+let circle = document.createElement('div');
+circle.class = "circle";
+let temp = circle.cloneNode(true);
+temp.innerText = 10;
+main.appendChild(temp);
