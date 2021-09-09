@@ -37,7 +37,7 @@ function createTree(values,main) {
         let circle = createCircle(values[i]);
         row.appendChild(circle);
     }
-    if(values.length-1 < maxLeaves(level)) main.appendChild(row);
+    if(values.length-1-prevLevelCount(level) < maxLeaves(level)) main.appendChild(row);
     // let temp = createRow(createCircle(10));
     // main.appendChild(temp);
     // temp = createRow(createCircle(15));
